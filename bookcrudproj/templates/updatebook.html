@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="/update/{{ book.id }}" method="Post">
+    {% csrf_token %}
+    <h1> update section</h1> 
+    title :<input type="text" name="title" value="{{ book.title }}"><br>
+    author :<input type="text" name="author" value="{{ book.author }}"><br>
+    price :<input type="text" name="price" value="{{ book.price }}"><br>
+    <input type="submit" value="updatebook" ><br>
+
+  </form>
+</body>
+</html>
